@@ -3,7 +3,9 @@
   "description": "Firebase related web components",
   "main": "tm-firebase.js",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/polymer": "^3.0.0",
+    "firebase": "^5.5.3",
+    "firebaseui": "^3.4.1"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",

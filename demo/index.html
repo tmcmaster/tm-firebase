@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
@@ -8,26 +8,55 @@
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
+    <link rel="import" href="../tm-firebase.html">
+
     <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
+        import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+        import {} from '../tm-firebase.js';
+        class TmFirebaseTest extends PolymerElement {
+            static get template() {
+                return html`
+              <style>
+                :host {
+                  display: block;
+                }
+                h2 {
+                    text-align: center;
+                }
+              </style>
+              <h2>Hello [[user.name]]!</h2>
+              <tm-firebase user="{{user}}" config="[[config]]"></tm-firebase>
+            `;
+            }
+
+            static get properties() {
+                return {
+                    user: {
+                        type: Object,
+                        value: {}
+                    },
+                    config: {
+                        type: Object,
+                        value: {
+                            apiKey: "AIzaSyBYHSuS_qzcYUnwAc3KG_LSzhSN9wXDewU",
+                            authDomain: "stunt-hamster.firebaseapp.com",
+                            databaseURL: "https://stunt-hamster.firebaseio.com",
+                            projectId: "stunt-hamster",
+                            storageBucket: "stunt-hamster.appspot.com",
+                            messagingSenderId: "651006465873"
+                        }
+                    }
+                };
+            }
+        }
+
+        window.customElements.define('tm-firebase-test', TmFirebaseTest);
     </script>
 
-    <script type="module" src="../tm-firebase.js"></script>
-
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic tm-firebase demo</h3>
-      <demo-snippet>
-        <template>
-          <tm-firebase></tm-firebase>
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
+</head>
+<body>
+<div class="vertical-section-container centered">
+    <tm-firebase-test></tm-firebase-test>
+</div>
+</body>
 </html>
