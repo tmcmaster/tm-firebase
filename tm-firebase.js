@@ -16,17 +16,16 @@ class TmFirebase extends PolymerElement {
         :host {
           display: block;
         }
-        img.firebaseui-idp-icon {
-            src: url("https://raw.githubusercontent.com/firebase/firebaseui-web/master/image/twitter.svg");
-        }
+        /*img.firebaseui-idp-icon {*/
+            /*src: url("https://raw.githubusercontent.com/firebase/firebaseui-web/master/image/twitter.svg");*/
+        /*}*/
         #loader {
             width:100%;
             text-align: center;
         }
       </style>
       
-      <link type="text/css" rel="stylesheet" href="../lib/firebaseui.css" />
-      <link type="text/css" rel="stylesheet" href="/node_modules/tm-firebase/lib/firebaseui.css" />
+      <link type="text/css" rel="stylesheet" href="lib/firebaseui.css" />
 
       <div id="auth"></div>
       <div id="loader">Loading...</div>
@@ -80,14 +79,7 @@ class TmFirebase extends PolymerElement {
 
     setupFirebase() {
         var self = this;
-        // var config = {
-        //     apiKey: "AIzaSyBYHSuS_qzcYUnwAc3KG_LSzhSN9wXDewU",
-        //     authDomain: "stunt-hamster.firebaseapp.com",
-        //     databaseURL: "https://stunt-hamster.firebaseio.com",
-        //     projectId: "stunt-hamster",
-        //     storageBucket: "stunt-hamster.appspot.com",
-        //     messagingSenderId: "651006465873"
-        // };
+
         firebase.initializeApp(this.config);
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         var uiConfig = {
