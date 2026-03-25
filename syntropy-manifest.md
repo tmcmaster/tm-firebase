@@ -1,35 +1,25 @@
 ---
-project:
-  name: "tm-firebase"
-  description: "Firebase related web components" # Escape double quotes in description
-  author: "Tim McMaster"
-  version: "0.1.0"
-
-origin:
-  repo_type: "original"
-  git_url: "https://github.com/tmcmaster/tm-firebase"
-  created: "2018-10-06"
-  modified: "2025-05-29"
-
-classification:
-  status: "unsorted"
-  engagement: "shelved"
-  priority: "low"
-  intent: []
-  domain: []
-  audience: "personal"
-
-stack:
-  languages: []
-  frameworks: []
-  databases: []
-  infrastructure: []
-  cloud: "none"
-
-capabilities:
-  features: []
-
-syntropy_id: ""
-collections: []
-tags: []
+Title: tm-firebase
+Description: Firebase related web components
+Author: Tim McMaster
+Created: '2018-10-06'
+Modified: '2025-05-29'
+Status: concept
+Engagement: back-burner
+Audience: personal
+Priority: sometime
+Version: 0.1.0
+Repo-Type: original
+Repo-Author: tmcmaster
+Repo-Name: tm-firebase
+Intent: []
+Domain: []
+Languages:
+- HTML
+- Roff
+Frameworks: []
+Databases: []
+Infrastructure: []
+Features: []
 ---
+
